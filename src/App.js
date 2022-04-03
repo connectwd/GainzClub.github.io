@@ -1,33 +1,32 @@
-import React from 'react'
-import { Root, Routes, addPrefetchExcludes } from 'react-static'
-//
-import { Link, Router } from 'components/Router'
-import Dynamic from 'containers/Dynamic'
-
-import './app.css'
-
-// Any routes that start with 'dynamic' will be treated as non-static routes
-addPrefetchExcludes(['dynamic'])
+import React, { useState } from 'react';
+import Title from './comps/Title';
+import UploadForm from './comps/UploadForm';
+import ImageGrid from './comps/ImageGrid';
+import Modal from './comps/Modal';
 
 function App() {
+  const [selectedImg, setSelectedImg] = useState(null);
+
   return (
-    <Root>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/dynamic">Dynamic</Link>
-      </nav>
-      <div className="content">
-        <React.Suspense fallback={<em>Loading...</em>}>
-          <Router>
-            <Dynamic path="dynamic" />
-            <Routes path="*" />
-          </Router>
-        </React.Suspense>
+    <div className="App" style={{ backgroundImage: "url(/images/szabolcs-toth-CyuvsE3TVak-unsplash.jpg)" }}>
+      <header >
+        <Title />
+      </header>
+      <div className='content-body'>
+        <ImageGrid setSelectedImg={setSelectedImg} />
+      { selectedImg && (
+        <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
+        )}
+        <div className='token-info'>
+
+        </div>
+        <div className='team-info'>
+          
+        </div>
       </div>
-    </Root>
-  )
+      <footer></footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
