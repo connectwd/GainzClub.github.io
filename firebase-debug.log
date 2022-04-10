@@ -1,0 +1,13 @@
+[debug] [2022-04-10T17:04:23.301Z] ----------------------------------------------------------------------
+[debug] [2022-04-10T17:04:23.303Z] Command:       /Users/jowen/.nvm/versions/node/v16.13.1/bin/node /Users/jowen/.nvm/versions/node/v16.13.1/bin/firebase deploy
+[debug] [2022-04-10T17:04:23.303Z] CLI Version:   10.6.0
+[debug] [2022-04-10T17:04:23.304Z] Platform:      darwin
+[debug] [2022-04-10T17:04:23.304Z] Node Version:  v16.13.1
+[debug] [2022-04-10T17:04:23.306Z] Time:          Sun Apr 10 2022 18:04:23 GMT+0100 (British Summer Time)
+[debug] [2022-04-10T17:04:23.306Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-04-10T17:04:23.363Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-04-10T17:04:23.363Z] > authorizing via signed-in user (jakeowen16@googlemail.com)
+[debug] [2022-04-10T17:04:23.363Z] [iam] checking project gainz-club for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-04-10T17:04:23.366Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gainz-club:testIamPermissions [none]
+[debug] [2022-04-10T17:04:23.366Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gainz-club:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
