@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faDiscord, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-
-
 
 const Navbar = () => {
     return (
@@ -16,11 +13,5 @@ const Navbar = () => {
         </nav>
     );
 };
-
-
-Navbar.propTypes = {
-
-};
-
 
 export default Navbar;
