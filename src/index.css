@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
 :root{
-  --primary: #efb6b2;
-  --secondary: #4e4e4e;
+  --primary-black: #07090a;
+  --secondary-black: #1e2120;
+  --dark-grey: #667075;
+  --light-grey: #d3dce0;
+  --red: #681b1b;
   --error: #ff4a4a;
+  background-color: black;
+  --font-family: 'Permanent Marker', cursive;
   
 }
 .App {  
@@ -11,9 +16,17 @@
   background-repeat:   no-repeat;
   background-position: center center; 
   background-attachment: fixed;
-  min-width: 101vw;
-  min-height: 101vh;
+  min-width: 100vw;
+  min-height: 100vh;
   overscroll-behavior: contain;
+  
+}
+
+  .text-box{
+  background-color: var(--secondary-black);
+  box-shadow: 0px 0px 20px 10px var(--red);
+  width: 80%;
+  max-width: 960px;
 }
 
 
@@ -31,7 +44,7 @@ header{
   align-items: center;
 }
 footer{
-  background-color: black;
+  background-color: var(--primary-black);
   min-height: 10vh;
 }
 .content-body{
@@ -39,20 +52,37 @@ footer{
   margin: 0 auto;
   padding-bottom: 30px;
 }
-.title h1{
-  color: var(--primary);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  font-weight: normal;
+
+.title {
+  max-width: 960px;
+  align-items: center;
+  height: 333px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20vh 0 60vh 0;
+  transform: translate(-0%, 40%)
 }
-.title h2, .title p{
-  color: whitesmoke;
+.title h2, h2{
+  color: var(--light-grey);
   text-align: center;
+  font-family: var(--font-family);
 }
 .title h2{
-  padding: 60px 40px;
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin: 0;
+  float: right;
+  height: inherit;
+  flex-grow: 3;
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+.title img {
+  margin: 20px 20px 20px 50px;
+  border-radius: 50%;
+  width: 30%;
 }
 
 /* upload form styles */
@@ -129,5 +159,61 @@ label:hover{
   max-height: 80%;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
-  border: 3px solid white;
+  border: 5px solid --red;
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--primary-black);
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-family);
+}
+
+/* Navbar links */
+.navbar a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  color: var(--light-grey);
+  text-decoration: none;
+}
+.projectName {
+  font-size: 2rem;
+  color: var(--light-grey);
+  margin: 8px;
+}
+
+/* Navbar links on mouse-over */
+
+.navbar a:hover {
+  background-color: var(--dark-grey);
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #04AA6D;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 400 pixels */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+.token-info, .team-info{
+  margin: 0px 0px 40px 0;
+  width: 100%;
+  color: var(--light-grey);
+  text-align: justify;
+  font-size: 1rem;
+  max-width: 960px;
+
+}
+.token-info p {
+  padding: 15px;
 }
