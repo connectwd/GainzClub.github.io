@@ -15,27 +15,22 @@
   background-size:     cover;                   
   background-repeat:   no-repeat;
   background-position: center center; 
-  background-attachment: fixed;
-  min-width: 100vw;
-  min-height: 100vh;
+  background-attachment: scroll;
+  max-width: 100vw;
+  max-height: 100vh;
   overscroll-behavior: contain;
-  
+  background-image: linear-gradient(to bottom, rgba(255,153,153,0) 0%,var(--primary-black) 45%,black 100%), url(/images/szabolcs-toth-CyuvsE3TVak-unsplash.jpg);
 }
-
-  .text-box{
-  background-color: var(--secondary-black);
-  box-shadow: 0px 0px 20px 10px var(--red);
-  width: 80%;
-  max-width: 960px;
-}
-
 
 /* base styles & title */
 body{
-  font-family: "Noto Serif";
+  
   background-color: transparent;
   margin: 0;
 }
+body > iframe {
+  pointer-events: none; /* completely needed to stop annoying iframe overlay in dev */
+ }
 header{
   width: 100%;
   min-height: 60vh;
@@ -44,89 +39,77 @@ header{
   align-items: center;
 }
 footer{
+  font-family: var(--font-family);
+  color: var(--light-grey);
   background-color: var(--primary-black);
-  min-height: 10vh;
+  min-height: 8vh; 
+  font-size: 1vw;
+}
+footer h2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%)
 }
 .content-body{
+  font-family: "Noto Serif";
+  min-width: 80vw;
   max-width: 960px;
-  margin: 0 auto;
+  width: 95vw;
+  margin: auto;
   padding-bottom: 30px;
+  
+}
+.content-body h2 {
+  font-family: var(--font-family);
+  margin: 0 auto auto 2vw;
 }
 
 .title {
-  max-width: 960px;
-  align-items: center;
-  height: 333px;
-  display: flex;
-  justify-content: space-between;
-  margin: 20vh 0 60vh 0;
-  transform: translate(-0%, 40%)
+  /* border: #ff4a4a solid 5px; */
+  width: inherit;
+  height: 300px;
+  margin: 0vh 0 70vh 0;
+  transform: translate(-0%, 130%)
 }
-.title h2, h2{
+.title h2, h3, img{
   color: var(--light-grey);
   text-align: center;
   font-family: var(--font-family);
-}
-.title h2{
-  font-size: 3rem;
   margin: 0;
   float: right;
   height: inherit;
   flex-grow: 3;
   position: absolute;
-  top: 70%;
-  left: 70%;
+  top: 50%;
+  left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%)
+  
+}
+.title h2{
+  font-size: 4vw;
+  transform: translate(-10%, -40%)
+}
+.title h3 {
+  font-size: 2vw;
+  transform: translate(30%)
 }
 .title img {
   margin: 20px 20px 20px 50px;
   border-radius: 50%;
-  width: 30%;
+  width: 20vw;
+  height: 20vw;
+  min-width: 100px;
+  min-height: 100px;
+  transform: translate(-200%, -70%)
 }
-
-/* upload form styles */
-form{
-  margin: 30px auto 10px;
-  text-align: center;
-}
-label input{
-  height: 0;
-  width: 0;
-  opacity: 0;
-}
-label{
-  display: block;
-  width: 30px;
-  height: 30px;
-  border: 1px solid var(--primary);
-  border-radius: 50%;
-  margin: 10px auto;
-  line-height: 30px;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 24px;
-}
-label:hover{
-  background: var(--primary);
-  color: white;
-}
-.output{
-  height: 60px;
-  font-size: 0.8rem;
-}
-.error{
-  color: var(--error);
-}
-
-/* progress bar styles */
 
 /* image grid styles */
 .img-grid{
-  /* margin: 20px auto; */
+  margin: 2vw auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 4vw;
+  max-width: 90vw;
 }
 .img-wrap{
   overflow: visible;
@@ -144,27 +127,8 @@ label:hover{
   left: 0;
 }
 
-/* modal styles */
-.backdrop{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-}
-.backdrop img{
-  display: block;
-  max-width: 60%;
-  max-height: 80%;
-  margin: 60px auto;
-  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
-  border: 5px solid --red;
-}
-
 .navbar {
   width: 100%;
-  background-color: var(--primary-black);
   overflow: auto;
   position: fixed;
   top: 0;
@@ -176,44 +140,53 @@ label:hover{
 .navbar a {
   float: right;
   text-align: center;
-  padding: 12px;
+  padding: 2%;
   color: var(--light-grey);
   text-decoration: none;
 }
 .projectName {
   font-size: 2rem;
   color: var(--light-grey);
-  margin: 8px;
+  margin: 1% 0 0 3%;
 }
 
-/* Navbar links on mouse-over */
-
-.navbar a:hover {
-  background-color: var(--dark-grey);
+.text-box {
+  box-shadow: -5px 5px 5px var(--red);
+  width: 100%;
 }
-
-/* Current/active navbar link */
-.active {
-  background-color: #04AA6D;
+#roadmap{
+  height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 40%;
 }
-
+.roadmap-wrap {
+  overflow:visible;
+  padding-bottom: 50%;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+}
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 400 pixels */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
 
 .token-info, .team-info{
   margin: 0px 0px 40px 0;
   width: 100%;
   color: var(--light-grey);
   text-align: justify;
-  font-size: 1rem;
-  max-width: 960px;
-
+  font-size: 1.2rem;
+  position: relative;
 }
 .token-info p {
   padding: 15px;
+}
+
+@media screen and (max-width: 450px) {
+  .projectName {
+    font-size: 1.5rem;
+  }
+  h2 p {
+    font-size: 10px;
+  }
+
 }
