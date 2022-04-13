@@ -185,8 +185,21 @@ footer h2 {
   .projectName {
     font-size: 1.5rem;
   }
-  h2 p {
-    font-size: 10px;
+  .title {
+    margin: 0vh 0 85vh 0;
+  }
+  .title h2 {
+  font-size: 9vw;
+  transform: translate(-50%, 15%)
+  }
+  .title h3 {
+    font-size: 7vw;
+  transform: translate(-50%, 35%)
+  }
+  .title img {
+    width: 30vw;
+  height: 30vw;
+    transform: translate(-80%, -130%)
   }
 
 }
