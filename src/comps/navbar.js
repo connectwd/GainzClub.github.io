@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faDiscord, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 const Navbar = () => {
     return (
@@ -15,3 +15,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+//faDiscord
