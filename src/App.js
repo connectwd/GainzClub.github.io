@@ -61,10 +61,6 @@ Further benefits are in the pipeline! Watch this space! <br/><br/></p>
             *P&P may still apply.
           </p>
         </div>
-        <div className='text=box'>
-          {/* <h2>Roadmap</h2>
-           <div className='roadmap-wrap'> <img id='roadmap' src='/images/roadmap.jpeg' alt='road map'/></div> */}
-        </div>
         <div className='team-info'></div>
       </div>
       <footer>
