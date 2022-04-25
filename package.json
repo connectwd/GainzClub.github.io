@@ -1,6 +1,6 @@
 {
   "name": "GainzClub",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
@@ -23,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "minor-prod-release": "git repo-update && npm version minor && git relstart $npm_package_version && git relfinish",
-    "major-prod-release": "git repo-update && npm version major && git relstart $npm_package_version && git relfinish"
+    "minor-prod-release": "git repo-update && npm version minor && git relstart -m && git relfinish",
+    "major-prod-release": "git repo-update && npm version major && git relstart -M && git relfinish"
   },
   "eslintConfig": {
     "extends": "react-app"
