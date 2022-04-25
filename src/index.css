@@ -174,10 +174,6 @@ footer h2 {
   padding-bottom: 4rem;
 }
 
-.token-text{
-  /* border: blue solid 4px; */
-}
-
 .text-box {
   margin: 0px 0px 40px 0;
   color: var(--light-grey);
@@ -218,7 +214,6 @@ footer h2 {
   max-width: 90vw;
   min-width: 5rem;
   /* min-height: 40rem; */
-  border: #ff4a4a solid 3px;
 }
 .img-wrap{
   overflow: visible;
