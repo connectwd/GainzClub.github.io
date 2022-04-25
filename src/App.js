@@ -14,16 +14,17 @@ function App() {
         <Title />
       </header>
       <div className='content-body'>
-        <div className='token-info text-box'>
+        <div className='text-box'>
           <h2>What is the Gainz Gym?</h2>
           <p>
 Gainz Club is a one man passion project with the goal of bringing together the fitness industry and the world of NFT's! 
-We will be releasing 1500 Gainz shaker NFT's in 3 stages of 500. This way we don't dilute supply and keep people on their toes.<br/><br/>
+We will be releasing 1500 Gainz shaker NFT's in 3 stages of 500. This way we don't dilute supply and keep people on their toes.
 The project will be run on the solana ecosystem and sold on solsea.io, price TBD.<br/><br/>
-With each purchase, you will get access to a growing community, a free gift per person and discounts on fitness supplements and the upcoming #GainzClubNFT merchandise being supplied from a local small business.<br/><br/>
+With each purchase, you will get access to a growing community, a free gift per person and discounts on fitness supplements and the upcoming #GainzClubNFT merchandise being supplied from a local small business.
 Further benefits are in the pipeline! Watch this space! <br/><br/></p>
         </div>
         <div className='token-info text-box'>
+          <div className='token-text'>
           <h2>The token</h2>
           <p>
             Each Gainz Shaker NFT is 1/1. These programmatically generated shakers make use of multiple trait variations to make sure no two are the same! <br /><br />
@@ -39,12 +40,13 @@ Further benefits are in the pipeline! Watch this space! <br/><br/></p>
           <p>
             Each variation offers it own touch of rarity, allowing from some truely rare combinations to be made.
           </p>
+          </div>
+          <ImageGrid setSelectedImg={setSelectedImg} />
         </div>
-        <ImageGrid setSelectedImg={setSelectedImg} />
       { selectedImg && (
         <Modal selectedImg={selectedImg} setSelectedImg={setSelectedImg} />
         )}
-        <div className='token-info text-box'>
+        <div className='text-box'>
           <h2>Utility: Gainz Rewards</h2>
           <p>
             We here at the Gainz Gym try and keep things simple, whether its in the gym or in business. And we are all about working with our hands! <br /><br />
@@ -59,9 +61,9 @@ Further benefits are in the pipeline! Watch this space! <br/><br/></p>
             *P&P may still apply.
           </p>
         </div>
-        <div className='token-info'>
-          <h2>Roadmap</h2>
-           <div className='roadmap-wrap'> <img id='roadmap' src='/images/roadmap.jpeg' alt='road map'/></div>
+        <div className='text=box'>
+          {/* <h2>Roadmap</h2>
+           <div className='roadmap-wrap'> <img id='roadmap' src='/images/roadmap.jpeg' alt='road map'/></div> */}
         </div>
         <div className='team-info'></div>
       </div>

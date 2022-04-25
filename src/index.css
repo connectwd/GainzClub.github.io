@@ -61,7 +61,6 @@ footer h2 {
 }
 .content-body h2 {
   font-family: var(--font-family);
-  margin: 0 auto auto 2vw;
 }
 
 .title {
@@ -105,11 +104,14 @@ footer h2 {
 
 /* image grid styles */
 .img-grid{
-  margin: 2vw auto;
+  margin: 0vw 0 0 2vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4vw;
+  grid-gap: 2%;
   max-width: 90vw;
+  min-width: 35rem;
+  /* min-height: 40rem; */
+  /* border: #ff4a4a solid 3px; */
 }
 .img-wrap{
   overflow: visible;
@@ -149,11 +151,6 @@ footer h2 {
   color: var(--light-grey);
   margin: 1% 0 0 3%;
 }
-
-.text-box {
-  box-shadow: -5px 5px 5px var(--red);
-  width: 100%;
-}
 #roadmap{
   height: 100%;
   max-width: 100%;
@@ -162,6 +159,7 @@ footer h2 {
   left: 40%;
 }
 .roadmap-wrap {
+  
   overflow:visible;
   padding-bottom: 50%;
   /* padding controls height, will always be perfectly square regardless of width */
@@ -169,16 +167,18 @@ footer h2 {
 }
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 400 pixels */
 
-.token-info, .team-info{
+.token-info{
+  display: flex;
+  float: right;
+  /* border: #ff4a4a solid 4px; */
+  padding-bottom: 4rem;
+}
+
+.text-box {
   margin: 0px 0px 40px 0;
-  width: 100%;
   color: var(--light-grey);
   text-align: justify;
-  font-size: 1.2rem;
-  position: relative;
-}
-.token-info p {
-  padding: 15px;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 450px) {
@@ -201,5 +201,42 @@ footer h2 {
   height: 30vw;
     transform: translate(-80%, -130%)
   }
-
+  .text-box{
+    font-size: 1rem;
+    padding: 2%;
+  }
+  /* image grid styles */
+.img-grid{
+  margin: 0vw 0 0 0vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2%;
+  max-width: 90vw;
+  min-width: 5rem;
+  /* min-height: 40rem; */
+}
+.img-wrap{
+  overflow: visible;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+}
+.img-wrap img{
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.token-info{
+  display:block;
+  float: none;
+  /* border: #ff4a4a solid 4px; */
+  padding-bottom: 4rem;
+}
+footer span{
+  font-size: 4vw;
+}
 }
