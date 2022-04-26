@@ -186,20 +186,21 @@ footer h2 {
     font-size: 1.5rem;
   }
   .title {
-    margin: 0vh 0 85vh 0;
+    margin: 0vh 0 62vh 0;
   }
   .title h2 {
   font-size: 9vw;
-  transform: translate(-50%, 15%)
+  transform: translate(-50%, -30%)
   }
   .title h3 {
-    font-size: 7vw;
-  transform: translate(-50%, 35%)
+    font-size: 6vw;
+  transform: translate(-50%, -10%)
   }
   .title img {
-    width: 30vw;
-  height: 30vw;
-    transform: translate(-80%, -130%)
+    margin: 20px 20px 20px 20px;
+    width: 40vw;
+  height: 40vw;
+    transform: translate(-60%, -250%)
   }
   .text-box{
     font-size: 1rem;
