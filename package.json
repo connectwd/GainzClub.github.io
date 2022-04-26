@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "minor-prod-release": "git repo-update && npm version minor && git flow release start ${npm_package_version} && git flow release start ${npm_package_version} && git push origin --tags",
+    "minor-prod-release": "git flow release start ${npm_package_version} && git flow release start ${npm_package_version} && git push origin --tags",
     "major-prod-release": "git repo-update && npm version major && git flow release start ${npm_package_version} && git flow release start ${npm_package_version} && git push origin --tags"
   },
   "eslintConfig": {
