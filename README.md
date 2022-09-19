@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## The Gainz Club NFT Project
 
 This project was created to showcase the Gainz Club NFT Project.
 
